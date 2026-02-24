@@ -340,16 +340,22 @@ p { line-height: 1.9; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f1929 0%, #1a2744 50%, #243660 100%);
+  background-color: #0f1929;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.08) 0%, transparent 50%);
+  background: linear-gradient(
+    to right,
+    rgba(10, 18, 35, 0.92) 0%,
+    rgba(26, 39, 68, 0.78) 55%,
+    rgba(26, 39, 68, 0.50) 100%
+  );
+  z-index: 0;
 }
 
 .hero::after {
@@ -662,6 +668,72 @@ p { line-height: 1.9; }
   opacity: 0.4;
 }
 
+.profile-intro__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+/* --- Worry Section Family Visual --- */
+.worry-visual {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 52px;
+  height: 200px;
+}
+
+.worry-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+.worry-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(26, 39, 68, 0.62) 0%,
+    rgba(26, 39, 68, 0.20) 40%,
+    rgba(26, 39, 68, 0.20) 60%,
+    rgba(26, 39, 68, 0.62) 100%
+  );
+}
+
+.worry-visual__caption {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--color-white);
+}
+
+.worry-visual__caption-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.worry-visual__caption-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
 .profile-intro__badge {
   position: absolute;
   bottom: -16px;
@@ -822,7 +894,9 @@ p { line-height: 1.9; }
 /* --- Page Header --- */
 .page-header {
   padding: 160px 24px 80px;
-  background: linear-gradient(135deg, #0f1929 0%, #1a2744 100%);
+  background-color: #1a2744;
+  background-size: cover;
+  background-position: center;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -832,7 +906,7 @@ p { line-height: 1.9; }
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.1) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(10, 18, 35, 0.90) 0%, rgba(26, 39, 68, 0.80) 100%);
 }
 
 .page-header__inner {
@@ -870,23 +944,23 @@ p { line-height: 1.9; }
 .profile-detail__sidebar {}
 
 .profile-detail__photo {
-  width: 100%;
-  aspect-ratio: 3/4;
-  background: linear-gradient(135deg, #e8e4dc, #d4cfc5);
-  border-radius: var(--radius-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #b0a898;
-  font-size: 0.85rem;
-  gap: 12px;
-  margin-bottom: 24px;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 8px 40px rgba(26, 39, 68, 0.22),
+    0 0 0 5px var(--color-bg),
+    0 0 0 9px rgba(201, 168, 76, 0.28);
 }
 
-.profile-detail__photo-icon {
-  font-size: 3.5rem;
-  opacity: 0.35;
+.profile-detail__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .profile-detail__name-block {

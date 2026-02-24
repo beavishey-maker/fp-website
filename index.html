@@ -73,11 +73,20 @@
         <p class="section__subtitle">一人で抱え込まず、専門家に相談することで解決の道が見えてきます。</p>
         <div class="divider"></div>
       </div>
-      <div class="worry-visual fade-in">
-        <img src="images/ファミリー.webp" alt="家族でお金のことを相談するイメージ" loading="lazy">
-        <div class="worry-visual__caption">
-          <span class="worry-visual__caption-label">Your Family's Future</span>
-          <p class="worry-visual__caption-text">大切な家族の未来のために、今できることを。</p>
+      <div class="worry-visual-wrap">
+        <div class="worry-visual fade-in">
+          <img src="images/ファミリー.webp" alt="家族でお金のことを相談するイメージ" loading="lazy">
+          <div class="worry-visual__caption">
+            <span class="worry-visual__caption-label">Your Family's Future</span>
+            <p class="worry-visual__caption-text">大切な家族の未来のために、今できることを。</p>
+          </div>
+        </div>
+        <div class="worry-visual fade-in">
+          <img src="images/ホーム.webp" alt="明るい未来のイメージ" loading="lazy">
+          <div class="worry-visual__caption">
+            <span class="worry-visual__caption-label">Your Bright Future</span>
+            <p class="worry-visual__caption-text">あなたらしい未来を、一緒に描きましょう。</p>
+          </div>
         </div>
       </div>
       <div class="cards cards--4">
@@ -142,8 +151,9 @@
   </section>
 
   <!-- Services Overview -->
-  <section class="section section--dark">
-    <div class="container">
+  <section class="section section--dark" style="background-image: url('images/サービス.webp'); background-size: cover; background-position: center; position: relative;">
+    <div style="position: absolute; inset: 0; background: rgba(26,39,68,0.82);"></div>
+    <div class="container" style="position: relative; z-index: 1;">
       <div class="section__header fade-in">
         <span class="section__label">Services</span>
         <h2 class="section__title" style="color: #fff;">専門分野のご紹介</h2>
@@ -188,7 +198,7 @@
       <div class="profile-intro">
         <div class="profile-intro__image fade-in-left">
           <img
-            src="images/ホーム.webp"
+            src="images/プロフィール.webp"
             alt="ファイナンシャルプランナー 渡辺加奈子"
             class="profile-intro__img"
             loading="lazy"

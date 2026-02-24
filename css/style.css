@@ -1744,6 +1744,20 @@ p { line-height: 1.9; }
   }
 }
 
+/* --- Worry Visual Wrap (2枚並び) --- */
+.worry-visual-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .worry-visual-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Utility --- */
 .text-center { text-align: center; }
 .text-accent { color: var(--color-accent); }
